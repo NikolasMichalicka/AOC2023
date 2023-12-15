@@ -3,9 +3,7 @@ lines = file.readlines()
 
 a = 0
 for i, line in enumerate(lines):
-    line = line.strip("\n")
-    line = line.split(":")[1]
-    line = line.split(";")
+    line = line.strip("\n").split(":")[1].split(";")
     max = {"red": 0, "green": 0, "blue": 0}
     for x in line:
         for y in x.split(","):
